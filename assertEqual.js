@@ -1,9 +1,9 @@
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected)
-    console.log(String.fromCodePoint(0x2705), ': [', actual, '] === [', expected, ']');
+    console.log(`${String.fromCodePoint(0x2705)} : ${actual} === ${expected}`);
   else
-    console.log(String.fromCodePoint(0x274C), ': [', actual, '] !== [', expected, ']');
+    console.log(`${String.fromCodePoint(0x274C)} : ${actual} !== ${expected}`);
 
 };
 
