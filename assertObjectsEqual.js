@@ -1,14 +1,4 @@
-const eqArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length)
-    return false;
-  else {
-    for (let i = 0; i < arr1.length; i++)
-      if (arr1[i] !== arr2[i])
-        return false;
-    return true;
-  }
-};
-
+const eqArrays = require('./eqArrays')
 const eqObjects = function(object1, object2) {
   let object1Keys = Object.keys(object1);
   let object2Keys = Object.keys(object2);
@@ -39,3 +29,6 @@ assertObjectsEqual({}, {});
 assertObjectsEqual({a: '1', b: 3}, {a: '1', b: 2});
 assertObjectsEqual({a: '1', b: 2, c: 1}, {a: '1', b: 2});
 assertObjectsEqual({a: '1', b: 2}, {});
+
+
+module.exports = assertObjectsEqual;

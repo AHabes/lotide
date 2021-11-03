@@ -1,11 +1,4 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual === expected)
-    console.log(`${String.fromCodePoint(0x2705)} : ${actual} === ${expected}`);
-  else
-    console.log(`${String.fromCodePoint(0x274C)} : ${actual} !== ${expected}`);
-};
-
+const assertEqual = require('./assertEqual');
 
 const countLetters = str => {
   let countedLetters = {};
@@ -25,3 +18,5 @@ assertEqual(countLetters('AAABDDE1113')['A'], 3);
 assertEqual(countLetters('AAABDDE1113')['B'], 1);
 assertEqual(countLetters('AAABDDE1113')['C'], undefined);
 assertEqual(countLetters('AAABDDE1113')['D'], 2);
+
+module.exports = countLetters;

@@ -1,10 +1,5 @@
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual === expected)
-    console.log(`${String.fromCodePoint(0x2705)} : ${actual} === ${expected}`);
-  else
-    console.log(`${String.fromCodePoint(0x274C)} : ${actual} !== ${expected}`);
-};
+const assertEqual = require('./assertEqual');
 
 const findKeyByValue = (obj, value) => {
   for (let element in obj) {
@@ -35,3 +30,5 @@ const persons = {
 assertEqual(findKeyByValue(persons, "John"), "firstName");
 assertEqual(findKeyByValue(persons, "football"), "hobbies");
 assertEqual(findKeyByValue(persons, 21), "age");
+
+module.exports = findKeyByValue;
